@@ -1,0 +1,412 @@
+.characters-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 0%, #281052, transparent 30%),
+    #05050d;
+  color: white;
+  padding-bottom: 90px;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.characters-header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  background: rgba(5, 5, 13, 0.94);
+  border-bottom: 1px solid #202033;
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.characters-header h1 {
+  margin: 0;
+  font-size: 17px;
+  text-align: center;
+}
+
+.characters-header span {
+  display: block;
+  margin-top: 3px;
+  color: #858597;
+  font-size: 9px;
+  text-align: center;
+}
+
+.characters-header button,
+.characters-back,
+.characters-search-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #29293d;
+  background: #10101d;
+  color: white;
+  font-size: 19px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.characters-content {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.characters-title {
+  margin-bottom: 18px;
+}
+
+.characters-title > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.characters-title h2 {
+  margin: 0;
+  font-size: 26px;
+}
+
+.characters-title small {
+  display: block;
+  margin-top: 12px;
+  color: #cfcfda;
+  font-size: 14px;
+}
+
+
+/* =========================
+   GRID
+========================= */
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+
+/* =========================
+   CHARACTER CARD
+========================= */
+
+.character-box {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  cursor: pointer;
+
+  background: #151124;
+  border: 1px solid #37234d;
+  border-radius: 16px;
+
+  padding: 10px;
+  box-sizing: border-box;
+
+  transition: 0.2s;
+}
+
+.character-box:hover {
+  transform: translateY(-3px);
+  border-color: #8b42c8;
+}
+
+.character-box:active {
+  transform: scale(0.97);
+}
+
+
+/* =========================
+   RANK
+========================= */
+
+.character-rank {
+  color: #b968ff;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 7px;
+}
+
+
+/* =========================
+   CHARACTER IMAGE
+========================= */
+
+.character-box-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+
+  max-height: 180px;
+
+  overflow: hidden;
+  border-radius: 12px;
+  background: #252036;
+}
+
+.character-box-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+.no-image {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 30px;
+}
+
+
+/* =========================
+   CHARACTER TEXT
+========================= */
+
+.character-box h3 {
+  margin: 9px 0 3px;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.character-box > span {
+  display: block;
+
+  color: #bc70ff;
+  font-size: 9px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.character-box > small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #9290a2;
+  font-size: 8px;
+}
+
+
+/* =========================
+   LOADING / EMPTY / ERROR
+========================= */
+
+.characters-message {
+  text-align: center;
+  padding: 45px 20px;
+
+  color: #a5a5b5;
+}
+
+.characters-message.error {
+  color: #ff7b8c;
+}
+
+.characters-message button {
+  display: block;
+  margin: 15px auto 0;
+
+  padding: 9px 18px;
+
+  border: 1px solid #8d3ac5;
+  border-radius: 10px;
+
+  background: #29133d;
+  color: white;
+
+  cursor: pointer;
+}
+
+.empty-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.characters-bottom-nav {
+  position: fixed;
+
+  bottom: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 100%;
+  max-width: 600px;
+
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  background: rgba(8, 8, 17, 0.97);
+
+  border-top: 1px solid #242438;
+
+  backdrop-filter: blur(20px);
+
+  z-index: 50;
+
+  padding: 0 5px;
+  box-sizing: border-box;
+}
+
+
+/* JSX ke direct divs */
+
+.characters-bottom-nav > div {
+  flex: 1;
+
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  color: #727286;
+
+  cursor: pointer;
+
+  height: 100%;
+}
+
+.characters-bottom-nav > div span {
+  display: block;
+
+  font-size: 18px;
+
+  margin-bottom: 4px;
+
+  line-height: 1;
+}
+
+.characters-bottom-nav > div small {
+  display: block;
+
+  font-size: 8px;
+
+  white-space: nowrap;
+}
+
+.characters-bottom-nav > div.active {
+  color: #bd4fff;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+  .characters-content {
+    padding: 16px 12px;
+  }
+
+  .characters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .character-box {
+    padding: 8px;
+    border-radius: 13px;
+  }
+
+  .character-box-image {
+    max-height: 150px;
+    border-radius: 10px;
+  }
+
+  .character-rank {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+
+  .character-box h3 {
+    margin-top: 7px;
+    font-size: 12px;
+  }
+
+  .characters-bottom-nav {
+    height: 70px;
+  }
+
+  .characters-bottom-nav > div span {
+    font-size: 17px;
+  }
+
+  .characters-bottom-nav > div small {
+    font-size: 7px;
+  }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 700px) {
+
+  .characters-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 1000px) {
+
+  .characters-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+}

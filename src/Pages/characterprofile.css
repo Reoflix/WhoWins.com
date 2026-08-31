@@ -1,0 +1,408 @@
+.character-profile-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 0%, #281052, transparent 30%),
+    #05050d;
+  color: white;
+  padding-bottom: 90px;
+}
+
+.profile-header {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #202033;
+  background: rgba(5, 5, 13, .94);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.profile-header h1 {
+  margin: 0;
+  font-size: 16px;
+  text-align: center;
+}
+
+.profile-header span {
+  display: block;
+  margin-top: 3px;
+  color: #858596;
+  font-size: 8px;
+  text-align: center;
+}
+
+.profile-back,
+.profile-share {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #29293d;
+  background: #10101d;
+  color: white;
+  font-size: 19px;
+}
+
+.profile-content {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 16px;
+}
+
+/* HERO */
+
+.character-hero {
+  padding: 18px;
+  border-radius: 21px;
+  background:
+    linear-gradient(145deg, #1a1034, #0b0b17);
+  border: 1px solid #302044;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  overflow: hidden;
+}
+
+.character-hero-image {
+  flex: 0 0 145px;
+  height: 170px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #151526;
+}
+
+.character-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.character-hero-info {
+  min-width: 0;
+}
+
+.profile-category {
+  display: inline-block;
+  padding: 5px 8px;
+  border-radius: 7px;
+  background: #2d1450;
+  color: #d78cff;
+  font-size: 7px;
+  font-weight: 800;
+}
+
+.character-hero-info h2 {
+  margin: 8px 0 5px;
+  font-size: 23px;
+}
+
+.character-hero-info p {
+  margin: 0;
+  color: #858596;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.hero-vote-count {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 12px;
+}
+
+.hero-vote-count span {
+  color: #ff4c8c;
+}
+
+.hero-vote-count strong {
+  font-size: 12px;
+}
+
+.hero-vote-count small {
+  color: #717183;
+  font-size: 7px;
+}
+
+/* VOTE */
+
+.character-vote-btn {
+  width: 100%;
+  height: 49px;
+  margin-top: 13px;
+  border: none;
+  border-radius: 13px;
+  background: linear-gradient(90deg, #4534e9, #dc3ed6);
+  color: white;
+  font-size: 11px;
+  font-weight: 900;
+  box-shadow: 0 10px 30px rgba(190, 50, 255, .2);
+}
+
+/* SECTIONS */
+
+.profile-section {
+  margin-top: 20px;
+}
+
+.profile-section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.profile-section-title h2 {
+  margin: 0;
+  font-size: 12px;
+}
+
+.profile-section-title button {
+  border: none;
+  background: transparent;
+  color: #bd4fff;
+  font-size: 9px;
+}
+
+/* STATS */
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.stat-card {
+  min-height: 100px;
+  padding: 12px 7px;
+  border-radius: 13px;
+  background: #0d0d19;
+  border: 1px solid #222238;
+  text-align: center;
+}
+
+.stat-card > span {
+  display: block;
+  font-size: 18px;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.stat-card small {
+  display: block;
+  margin-top: 4px;
+  color: #6f6f82;
+  font-size: 7px;
+}
+
+/* INFO */
+
+.profile-info-card {
+  margin-top: 12px;
+  padding: 16px;
+  border-radius: 16px;
+  background: #0c0c18;
+  border: 1px solid #222238;
+}
+
+.profile-info-card h3 {
+  margin: 0 0 8px;
+  font-size: 11px;
+}
+
+.profile-info-card p {
+  margin: 0;
+  color: #818193;
+  font-size: 9px;
+  line-height: 1.7;
+}
+
+/* RECENT BATTLE */
+
+.recent-battle-card {
+  padding: 15px;
+  border-radius: 16px;
+  background: #0c0c18;
+  border: 1px solid #222238;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.recent-character {
+  text-align: center;
+}
+
+.recent-character img,
+.recent-placeholder {
+  width: 65px;
+  height: 65px;
+  border-radius: 12px;
+  background: #151526;
+  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recent-character strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 9px;
+}
+
+.recent-vs {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #34344a;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 900;
+}
+
+/* RELATED */
+
+.related-characters {
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.related-characters::-webkit-scrollbar {
+  display: none;
+}
+
+.related-card {
+  flex: 0 0 100px;
+  padding: 7px;
+  border-radius: 13px;
+  background: #0d0d19;
+  border: 1px solid #222238;
+  cursor: pointer;
+}
+
+.related-image {
+  width: 100%;
+  height: 95px;
+  border-radius: 9px;
+  overflow: hidden;
+  background: #151526;
+}
+
+.related-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.related-card strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 9px;
+}
+
+.related-card small {
+  display: block;
+  margin-top: 4px;
+  color: #ff4b8b;
+  font-size: 8px;
+}
+
+/* NOT FOUND */
+
+.profile-not-found {
+  min-height: 100vh;
+  background: #05050d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-not-found h2 {
+  font-size: 18px;
+}
+
+.profile-not-found button {
+  padding: 10px 15px;
+  border: 1px solid #673a91;
+  border-radius: 10px;
+  background: #171021;
+  color: #d88aff;
+}
+
+/* BOTTOM NAV */
+
+.profile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: rgba(8, 8, 17, .97);
+  border-top: 1px solid #242438;
+  backdrop-filter: blur(20px);
+  z-index: 50;
+}
+
+.profile-bottom-nav div {
+  text-align: center;
+  color: #727286;
+  cursor: pointer;
+}
+
+.profile-bottom-nav span {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.profile-bottom-nav small {
+  font-size: 8px;
+}
+
+.profile-bottom-nav .active {
+  color: #bd4fff;
+}
+.character-vote-btn.voted {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.profile-vote-message {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 9px;
+}
+
+.profile-vote-message.success {
+  background: #10291d;
+  color: #55e49b;
+  border: 1px solid #22543d;
+}
+
+.profile-vote-message.warning {
+  background: #29151a;
+  color: #ff788b;
+  border: 1px solid #542630;
+}

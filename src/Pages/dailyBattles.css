@@ -1,0 +1,362 @@
+.daily-battles-page {
+  min-height: 100vh;
+  background: #05050d;
+  color: white;
+  padding-bottom: 30px;
+}
+
+
+.daily-battles-header {
+  height: 74px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+
+  border-bottom:
+    1px solid #1d1d30;
+
+  background:
+    rgba(5, 5, 13, 0.95);
+
+  position: sticky;
+  top: 0;
+
+  z-index: 20;
+
+  backdrop-filter:
+    blur(20px);
+}
+
+
+.daily-battles-header h1 {
+  margin: 0;
+
+  font-size: 20px;
+
+  text-align: center;
+}
+
+
+.daily-battles-header span {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 10px;
+
+  color: #858599;
+
+  text-align: center;
+}
+
+
+.battles-back-btn {
+  width: 45px;
+  height: 45px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid #29293e;
+
+  background: #10101d;
+
+  color: white;
+
+  font-size: 22px;
+
+  cursor: pointer;
+}
+
+
+.header-space {
+  width: 45px;
+}
+
+
+.daily-battles-content {
+  width: 100%;
+
+  max-width: 600px;
+
+  margin: auto;
+
+  padding: 18px 14px;
+}
+
+
+.live-title {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 15px;
+}
+
+
+.live-title span {
+  color: #ff6381;
+
+  font-size: 13px;
+
+  font-weight: 800;
+}
+
+
+.live-title small {
+  color: #858599;
+
+  font-size: 11px;
+}
+
+
+.battles-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+.live-battle-card {
+  padding: 14px;
+
+  border-radius: 20px;
+
+  border:
+    1px solid #28283e;
+
+  background:
+    linear-gradient(
+      145deg,
+      #131321,
+      #0b0b15
+    );
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.live-battle-card:hover {
+  border-color: #8644e8;
+}
+
+
+.live-battle-card:active {
+  transform: scale(0.98);
+}
+
+
+.battle-live-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+
+.live-badge {
+  background:
+    rgba(255, 53, 89, 0.15);
+
+  color: #ff6381;
+
+  padding: 6px 9px;
+
+  border-radius: 8px;
+
+  font-size: 9px;
+
+  font-weight: 800;
+}
+
+
+.battle-status {
+  color: #bd62ff;
+
+  font-size: 10px;
+
+  font-weight: 700;
+}
+
+
+.live-battle-fighters {
+  display: grid;
+
+  grid-template-columns:
+    1fr
+    42px
+    1fr;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.live-fighter {
+  min-width: 0;
+}
+
+
+.live-character-image {
+  width: 100%;
+
+  height: 130px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 14px;
+
+  background: #181827;
+}
+
+
+.live-character-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+.live-character-image span {
+  font-size: 50px;
+}
+
+
+.live-fighter strong {
+  display: block;
+
+  margin-top: 9px;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+.live-vs {
+  font-size: 17px;
+
+  font-weight: 900;
+
+  color: #d9d9e5;
+}
+
+
+.battle-card-bottom {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: 15px;
+
+  padding-top: 12px;
+
+  border-top:
+    1px solid #222234;
+}
+
+
+.battle-card-bottom span {
+  color: #9999aa;
+
+  font-size: 10px;
+}
+
+
+.battle-card-bottom button {
+  border: 0;
+
+  background: none;
+
+  color: #bf61ff;
+
+  font-size: 10px;
+
+  font-weight: 800;
+
+  cursor: pointer;
+}
+
+
+.battles-loading {
+  padding: 70px 20px;
+
+  text-align: center;
+
+  color: #9999aa;
+}
+
+
+.no-battles {
+  padding: 55px 20px;
+
+  text-align: center;
+
+  border-radius: 18px;
+
+  background: #10101b;
+
+  border:
+    1px solid #242438;
+}
+
+
+.no-battles h2 {
+  margin: 0 0 8px;
+
+  font-size: 18px;
+}
+
+
+.no-battles p {
+  color: #9292a5;
+
+  font-size: 13px;
+}
+
+
+.no-battles button {
+  margin-top: 15px;
+
+  padding: 10px 20px;
+
+  border-radius: 10px;
+
+  border:
+    1px solid #6636aa;
+
+  background: transparent;
+
+  color: #c766ff;
+
+  cursor: pointer;
+}

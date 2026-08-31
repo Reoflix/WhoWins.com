@@ -1,0 +1,611 @@
+.admin-tournaments-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      #281052,
+      transparent 32%
+    ),
+    #05050d;
+  color: white;
+  padding-bottom: 60px;
+}
+
+.admin-tournaments-header {
+  min-height: 76px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #242438;
+  background: rgba(5, 5, 13, 0.96);
+}
+
+.admin-tournaments-header h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.admin-tournaments-header span {
+  display: block;
+  margin-top: 5px;
+  color: #777789;
+  font-size: 11px;
+}
+
+.admin-tournaments-content {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 25px 18px;
+}
+
+.admin-success,
+.admin-error {
+  position: relative;
+  margin-bottom: 18px;
+  padding: 13px 42px 13px 15px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.admin-success {
+  background: rgba(40, 180, 110, 0.12);
+  border: 1px solid rgba(40, 180, 110, 0.35);
+  color: #63e6a3;
+}
+
+.admin-error {
+  background: rgba(255, 70, 90, 0.1);
+  border: 1px solid rgba(255, 70, 90, 0.3);
+  color: #ff7c8b;
+}
+
+.admin-success button,
+.admin-error button {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.admin-tournament-card {
+  padding: 22px;
+  border-radius: 18px;
+  background: #0d0d19;
+  border: 1px solid #28283d;
+}
+
+.admin-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.admin-section-heading h2 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.admin-section-heading p {
+  margin: 5px 0 0;
+  color: #777789;
+  font-size: 11px;
+}
+
+.admin-tournament-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 17px;
+}
+
+.admin-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.admin-field.full {
+  grid-column: 1 / -1;
+}
+
+.admin-field label {
+  color: #b9b9c8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-field label small {
+  margin-left: 6px;
+  color: #68687b;
+  font-weight: 400;
+}
+
+.admin-field input,
+.admin-field textarea,
+.admin-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border-radius: 10px;
+  border: 1px solid #29293e;
+  background: #080812;
+  color: white;
+  outline: none;
+  font-size: 13px;
+}
+
+.admin-field textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.admin-field input:focus,
+.admin-field textarea:focus,
+.admin-field select:focus {
+  border-color: #8d3fd0;
+}
+
+.admin-character-section {
+  margin-top: 3px;
+}
+
+.admin-character-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.admin-character-heading label {
+  display: block;
+  color: #b9b9c8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-character-heading small {
+  display: block;
+  margin-top: 4px;
+  color: #666679;
+  font-size: 10px;
+}
+
+.admin-character-heading strong {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #29143d;
+  color: #c86aff;
+}
+
+.admin-character-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(110px, 1fr)
+  );
+  gap: 10px;
+}
+
+.admin-character {
+  position: relative;
+  padding: 9px;
+  border-radius: 12px;
+  border: 1px solid #29293e;
+  background: #080812;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.admin-character:hover {
+  border-color: #7135a5;
+}
+
+.admin-character.selected {
+  border-color: #b74dff;
+  background: #21102f;
+  box-shadow:
+    0 0 0 1px rgba(183, 77, 255, 0.25);
+}
+
+.admin-character-image {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #161625;
+}
+
+.admin-character-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.admin-character > strong {
+  display: block;
+  margin-top: 7px;
+  font-size: 10px;
+}
+
+.admin-character-check {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 21px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #a842ed;
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.admin-create-btn {
+  grid-column: 1 / -1;
+  margin-top: 5px;
+  padding: 15px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(
+    90deg,
+    #5531f2,
+    #d02dd7
+  );
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.admin-create-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.admin-existing-section {
+  margin-top: 35px;
+}
+
+.admin-existing-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.admin-existing-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 16px;
+  border-radius: 13px;
+  background: #0d0d19;
+  border: 1px solid #242438;
+}
+
+.admin-existing-card h3 {
+  margin: 7px 0 4px;
+  font-size: 14px;
+}
+
+.admin-existing-card small {
+  color: #707083;
+  font-size: 10px;
+}
+
+.admin-existing-card p {
+  margin: 6px 0 0;
+  color: #c5c5d0;
+  font-size: 10px;
+}
+
+.admin-status {
+  display: inline-block;
+  padding: 4px 7px;
+  border-radius: 6px;
+  font-size: 8px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.admin-status.live {
+  color: #5ce6a0;
+  background: rgba(60, 200, 120, 0.12);
+}
+
+.admin-status.upcoming {
+  color: #ffc95b;
+  background: rgba(255, 195, 77, 0.1);
+}
+
+.admin-status.completed {
+  color: #8c8c9c;
+  background: #191925;
+}
+
+.admin-delete-btn {
+  padding: 9px 12px;
+  border-radius: 8px;
+  border: 1px solid #7c2939;
+  background: #211017;
+  color: #ff7183;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.admin-loading,
+.admin-empty {
+  padding: 30px;
+  text-align: center;
+  border-radius: 14px;
+  border: 1px solid #242438;
+  background: #0d0d19;
+  color: #707083;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .admin-tournaments-header {
+    padding: 15px;
+  }
+
+  .admin-tournaments-header h1 {
+    font-size: 17px;
+  }
+
+  .admin-tournaments-content {
+    padding: 16px 12px;
+  }
+
+  .admin-tournament-card {
+    padding: 16px;
+    border-radius: 15px;
+  }
+
+  .admin-tournament-form {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-field.full {
+    grid-column: auto;
+  }
+
+  .admin-create-btn {
+    grid-column: auto;
+  }
+
+  .admin-character-grid {
+    grid-template-columns: repeat(
+      3,
+      1fr
+    );
+  }
+
+  .admin-existing-card {
+    align-items: flex-start;
+  }
+
+}
+/* =========================================
+   TOURNAMENT MATCHES
+========================================= */
+
+.admin-tournament-matches {
+  width: 100%;
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #242438;
+}
+
+.admin-matches-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.admin-matches-title h4 {
+  margin: 0;
+  color: #ddd;
+  font-size: 11px;
+}
+
+.admin-matches-title span {
+  color: #707083;
+  font-size: 7px;
+}
+
+.admin-match-card {
+  margin-top: 9px;
+  padding: 12px;
+  border-radius: 13px;
+  background: #090912;
+  border: 1px solid #25253a;
+}
+
+.admin-match-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.admin-match-top > span {
+  color: #777789;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.admin-match-status {
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 6px;
+}
+
+.admin-match-status.live {
+  color: #59e89f;
+  background: rgba(48, 190, 116, .1);
+}
+
+.admin-match-status.upcoming {
+  color: #ffc34d;
+  background: rgba(255, 195, 77, .1);
+}
+
+.admin-match-status.completed {
+  color: #777789;
+  background: #171724;
+}
+
+
+/* FIGHTERS */
+
+.admin-match-fighters {
+  display: grid;
+  grid-template-columns: 1fr 55px 1fr;
+  align-items: center;
+  gap: 5px;
+}
+
+.admin-match-character {
+  text-align: center;
+}
+
+.admin-match-image {
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: #171727;
+  border: 1px solid #29293e;
+  font-size: 25px;
+}
+
+.admin-match-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.admin-match-character strong {
+  display: block;
+  margin-top: 6px;
+  color: white;
+  font-size: 8px;
+}
+
+.admin-match-vs {
+  text-align: center;
+}
+
+.admin-match-vs strong {
+  display: block;
+  color: #c967ff;
+  font-size: 12px;
+}
+
+.admin-match-vs span {
+  display: block;
+  margin-top: 3px;
+  color: #55556a;
+  font-size: 6px;
+  font-weight: 900;
+}
+
+
+/* WINNER */
+
+.admin-match-winner {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  color: #ffc34d;
+  background: rgba(255, 195, 77, .06);
+  border: 1px solid rgba(255, 195, 77, .12);
+  font-size: 7px;
+}
+
+.admin-match-winner strong {
+  font-size: 8px;
+}
+
+
+/* FINALIZE */
+
+.admin-finalize-btn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 9px;
+  border-radius: 8px;
+  border: 1px solid #7936a7;
+  background: #171020;
+  color: #c967ff;
+  font-size: 7px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.admin-finalize-btn:hover {
+  background: #241431;
+}
+
+.admin-finalize-btn:active {
+  transform: scale(.98);
+}
+
+.admin-finalize-btn:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+
+/* EXISTING CARD */
+
+.admin-existing-info {
+  margin-bottom: 5px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 500px) {
+
+  .admin-match-fighters {
+    grid-template-columns: 1fr 45px 1fr;
+  }
+
+  .admin-match-image {
+    width: 58px;
+    height: 58px;
+  }
+
+}

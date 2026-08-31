@@ -1,0 +1,348 @@
+.admin-battles-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 50% 0%, #29104d, transparent 32%),
+    #05050d;
+  color: white;
+  padding-bottom: 40px;
+}
+
+.admin-battles-header {
+  height: 72px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #242438;
+  background: rgba(7, 7, 15, .95);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.admin-battles-header button {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #29293d;
+  border-radius: 50%;
+  background: #10101d;
+  color: white;
+  font-size: 17px;
+}
+
+.admin-battles-header > div {
+  text-align: center;
+}
+
+.admin-battles-header span {
+  color: #b95cff;
+  font-size: 6px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.admin-battles-header h1 {
+  margin: 3px 0 0;
+  font-size: 16px;
+}
+
+.admin-battles-content {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.battle-form-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: #0c0c18;
+  border: 1px solid #28283c;
+}
+
+.battle-form-title {
+  margin-bottom: 16px;
+}
+
+.battle-form-title > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.battle-form-title > div > span {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #181027;
+}
+
+.battle-form-title h2 {
+  margin: 0;
+  font-size: 13px;
+}
+
+.battle-form-title small {
+  display: block;
+  margin-top: 3px;
+  color: #68687a;
+  font-size: 7px;
+}
+
+.battle-field {
+  display: block;
+  margin-top: 12px;
+}
+
+.battle-field > span {
+  display: block;
+  margin-bottom: 6px;
+  color: #858596;
+  font-size: 7px;
+  font-weight: 700;
+}
+
+.battle-field input,
+.battle-field select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px;
+  border: 1px solid #28283c;
+  border-radius: 10px;
+  outline: none;
+  background: #10101d;
+  color: white;
+  font-family: inherit;
+  font-size: 9px;
+}
+
+.battle-field input:focus,
+.battle-field select:focus {
+  border-color: #9343bd;
+}
+
+.fighter-select-grid {
+  display: grid;
+  grid-template-columns: 1fr 35px 1fr;
+  align-items: end;
+  gap: 7px;
+}
+
+.battle-vs {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d054e9;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.battle-date-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.create-battle-btn {
+  width: 100%;
+  height: 46px;
+  margin-top: 16px;
+  border: none;
+  border-radius: 11px;
+  background: linear-gradient(90deg, #4b38e8, #d640d5);
+  color: white;
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.create-battle-btn span {
+  margin-left: 7px;
+}
+
+.create-battle-btn:disabled {
+  opacity: .6;
+}
+
+.admin-battle-list {
+  margin-top: 22px;
+}
+
+.admin-battle-list-title {
+  margin-bottom: 10px;
+}
+
+.admin-battle-list-title h2 {
+  margin: 0;
+  font-size: 13px;
+}
+
+.admin-battle-list-title small {
+  display: block;
+  margin-top: 3px;
+  color: #666678;
+  font-size: 7px;
+}
+
+.battle-message {
+  padding: 35px 20px;
+  text-align: center;
+  border: 1px solid #222238;
+  border-radius: 14px;
+  background: #0c0c18;
+}
+
+.battle-message > span {
+  font-size: 28px;
+}
+
+.battle-message h3 {
+  margin: 8px 0 4px;
+  font-size: 12px;
+}
+
+.battle-message p {
+  margin: 0;
+  color: #666678;
+  font-size: 8px;
+}
+
+.battle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.battle-item {
+  padding: 12px;
+  border: 1px solid #222238;
+  border-radius: 15px;
+  background: #0c0c18;
+}
+
+.battle-item-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.battle-item-top strong {
+  display: block;
+  font-size: 9px;
+}
+
+.battle-item-top small {
+  display: block;
+  margin-top: 4px;
+  color: #666678;
+  font-size: 6px;
+}
+
+.battle-status {
+  padding: 5px 7px;
+  border-radius: 6px;
+  font-size: 6px;
+  font-weight: 900;
+}
+
+.battle-status.upcoming {
+  color: #e7ba61;
+  background: #292011;
+}
+
+.battle-status.live {
+  color: #54e69b;
+  background: #10281d;
+}
+
+.battle-status.completed {
+  color: #858596;
+  background: #191923;
+}
+
+.battle-fighters {
+  display: grid;
+  grid-template-columns: 1fr 35px 1fr;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.battle-character {
+  text-align: center;
+}
+
+.battle-character-image {
+  width: 65px;
+  height: 65px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  background: #171727;
+}
+
+.battle-character-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.battle-character-image span {
+  color: #777789;
+}
+
+.battle-character strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 8px;
+}
+
+.battle-character small {
+  display: block;
+  margin-top: 3px;
+  color: #666678;
+  font-size: 6px;
+}
+
+.battle-vs-big {
+  text-align: center;
+  color: #d054e9;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.battle-item-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 13px;
+  padding-top: 10px;
+  border-top: 1px solid #202033;
+}
+
+.battle-item-actions button {
+  padding: 7px 8px;
+  border: 1px solid #29293d;
+  border-radius: 7px;
+  background: #12121f;
+  color: #aaaabc;
+  font-size: 6px;
+}
+
+.battle-item-actions button:hover {
+  border-color: #8242a8;
+  color: white;
+}
+
+.battle-item-actions .battle-delete {
+  margin-left: auto;
+  color: #ff7185;
+  border-color: #4b222c;
+}

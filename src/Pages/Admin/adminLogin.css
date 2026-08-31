@@ -1,0 +1,154 @@
+.admin-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      circle at 50% 20%,
+      #35125c,
+      transparent 35%
+    ),
+    #05050d;
+
+  color: white;
+}
+
+.admin-login-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 30px;
+  box-sizing: border-box;
+
+  border: 1px solid #29293d;
+  border-radius: 22px;
+
+  background: rgba(12, 12, 24, .96);
+
+  box-shadow:
+    0 20px 70px rgba(0, 0, 0, .45);
+
+  text-align: center;
+}
+
+.admin-login-logo {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #1b1028;
+
+  font-size: 30px;
+}
+
+.admin-login-brand {
+  color: #bd61ff;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.admin-login-card h1 {
+  margin: 8px 0 5px;
+  font-size: 24px;
+}
+
+.admin-login-card > p {
+  margin: 0 0 25px;
+  color: #707083;
+  font-size: 10px;
+}
+
+.admin-login-card form {
+  text-align: left;
+}
+
+.admin-login-card label {
+  display: block;
+  margin-bottom: 14px;
+
+  color: #9292a5;
+  font-size: 9px;
+}
+
+.admin-login-card input {
+  width: 100%;
+  box-sizing: border-box;
+
+  margin-top: 6px;
+  padding: 13px;
+
+  border: 1px solid #29293d;
+  border-radius: 10px;
+
+  outline: none;
+
+  background: #10101d;
+  color: white;
+
+  font-size: 10px;
+}
+
+.admin-login-card input:focus {
+  border-color: #a24bd4;
+}
+
+.admin-login-card form > button {
+  width: 100%;
+  height: 45px;
+
+  margin-top: 5px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #5139e8,
+    #d640d5
+  );
+
+  color: white;
+
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.admin-login-card form > button span {
+  margin-left: 8px;
+}
+
+.admin-login-card form > button:disabled {
+  opacity: .6;
+}
+
+.admin-login-error {
+  margin: 8px 0;
+  padding: 9px;
+
+  border: 1px solid #572735;
+  border-radius: 8px;
+
+  background: #211018;
+  color: #ff7289;
+
+  font-size: 8px;
+}
+
+.back-home-btn {
+  margin-top: 18px;
+
+  border: none;
+  background: transparent;
+
+  color: #68687b;
+  font-size: 8px;
+}

@@ -1,0 +1,260 @@
+.admin-polls-page {
+  min-height: 100vh;
+  background: #07070d;
+  color: white;
+}
+
+.admin-polls-header {
+  padding: 25px 6%;
+  border-bottom: 1px solid #252536;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-polls-header small,
+.admin-polls-title small {
+  color: #9b8cff;
+  letter-spacing: 2px;
+}
+
+.admin-polls-header h1,
+.admin-polls-title h2 {
+  margin: 5px 0 0;
+}
+
+.admin-polls-header button,
+.refresh-btn {
+  background: #171525;
+  color: white;
+  border: 1px solid #38324e;
+  border-radius: 10px;
+  padding: 11px 18px;
+  cursor: pointer;
+}
+
+.admin-polls-content {
+  width: min(1100px, 92%);
+  margin: 35px auto 100px;
+}
+
+.create-poll-card,
+.existing-polls {
+  background: #10101a;
+  border: 1px solid #29253b;
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 30px;
+}
+
+.admin-polls-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.admin-polls-title > span {
+  font-size: 35px;
+}
+
+.create-poll-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.create-poll-card label {
+  margin-top: 10px;
+  color: #aaa7b8;
+  font-size: 13px;
+}
+
+.create-poll-card input,
+.create-poll-card select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px;
+  background: #090910;
+  color: white;
+  border: 1px solid #302c43;
+  border-radius: 10px;
+  outline: none;
+}
+
+.create-poll-card input:focus,
+.create-poll-card select:focus {
+  border-color: #8b5cf6;
+}
+
+.poll-options-grid,
+.poll-time-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.poll-option-box {
+  background: #0b0b12;
+  border: 1px solid #29253b;
+  padding: 18px;
+  border-radius: 14px;
+}
+
+.poll-option-box h3 {
+  margin-top: 0;
+}
+
+.poll-preview {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-top: 10px;
+  border: 1px solid #39334d;
+}
+
+.create-poll-btn {
+  margin-top: 20px;
+  padding: 15px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(
+    90deg,
+    #5130e8,
+    #d72fd2
+  );
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.create-poll-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.admin-polls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.admin-poll-item {
+  background: #0b0b12;
+  border: 1px solid #29253b;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.admin-poll-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.poll-status-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.poll-status,
+.poll-category {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.poll-status.live {
+  background: #123c27;
+  color: #5cff9a;
+}
+
+.poll-status.upcoming {
+  background: #342b0e;
+  color: #ffd84d;
+}
+
+.poll-status.ended {
+  background: #292934;
+  color: #aaa;
+}
+
+.poll-status.disabled {
+  background: #3b1818;
+  color: #ff7777;
+}
+
+.poll-category {
+  background: #211936;
+  color: #c3a8ff;
+}
+
+.admin-poll-info h3 {
+  margin: 12px 0;
+}
+
+.poll-choices {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.poll-choices b {
+  color: #9b8cff;
+}
+
+.admin-poll-info > small {
+  display: block;
+  margin-top: 10px;
+  color: #9b8cff;
+}
+
+.admin-poll-info p {
+  color: #777487;
+  font-size: 12px;
+}
+
+.delete-poll-btn {
+  width: 42px;
+  height: 42px;
+  border: 1px solid #4a2525;
+  border-radius: 10px;
+  background: #211112;
+  cursor: pointer;
+}
+
+.polls-loading,
+.polls-empty {
+  text-align: center;
+  padding: 50px;
+  color: #888;
+}
+
+.polls-empty span {
+  font-size: 40px;
+}
+
+@media (max-width: 700px) {
+  .poll-options-grid,
+  .poll-time-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-polls-header {
+    padding: 20px;
+  }
+
+  .create-poll-card,
+  .existing-polls {
+    padding: 18px;
+  }
+
+  .admin-poll-main {
+    flex-direction: column;
+  }
+}
