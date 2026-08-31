@@ -10,7 +10,7 @@ import {
 
 import { supabase } from "../lib/supabase";
 
-import "./characterProfile.css";
+import "./characterprofile.css";
 
 
 function getGuestId() {
