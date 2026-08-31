@@ -762,7 +762,7 @@ function Home() {
             <div className="side-menu-header">
 
               <strong>
-                🔥 WHOWINS
+                🔥 GoFastBattle
               </strong>
 
 
@@ -917,9 +917,9 @@ function Home() {
           <div>
 
             <strong>
-              WHO
+              GOFAST
               <span>
-                WINS
+                BATTLE
               </span>
             </strong>
 
